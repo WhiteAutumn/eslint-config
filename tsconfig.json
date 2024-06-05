@@ -1,0 +1,23 @@
+{
+  "exclude": ["node_modules", "dist"],
+  
+  "compilerOptions": {
+    // Target
+    "target": "ESNEXT",
+    "lib": ["ESNEXT"],
+    "module": "NODENEXT",
+
+    "jsx":"preserve",
+
+    // Safety
+    "strict": true,
+
+    // Behavior
+    "esModuleInterop": true,
+
+    // Output
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true
+  }
+}

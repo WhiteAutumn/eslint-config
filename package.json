@@ -1,0 +1,34 @@
+{
+  "name": "@autumn.dev/eslint-config",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "My personal config for eslint",
+  "author": "WhiteAutumn",
+  "license": "MIT",
+  "main": "./dist/config.js",
+  "types": "./dist/config.d.ts",
+  "volta": {
+    "node": "20.14.0"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:strict": "cross-env STRICT=true eslint ."
+  },
+  "peerDependencies": {
+    "@stylistic/eslint-plugin-js": "^2.0.0",
+    "@stylistic/eslint-plugin-jsx": "^2.0.0",
+    "@stylistic/eslint-plugin-plus": "^2.0.0",
+    "@stylistic/eslint-plugin-ts": "^2.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "typescript-eslint": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.0.0",
+    "@types/node": "^20.0.0",
+    "cross-env": "^7.0.0",
+    "eslint": "^8.57.0",
+    "typescript": "~5.4.0"
+  }
+}

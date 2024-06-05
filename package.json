@@ -12,9 +12,11 @@
   },
   "scripts": {
     "dev": "tsc -w",
+    "build": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lint:strict": "cross-env STRICT=true eslint ."
+    "lint:strict": "cross-env STRICT=true eslint .",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin-js": "^2.0.0",

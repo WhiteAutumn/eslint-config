@@ -1,4 +1,5 @@
 import type { ESLint, Linter } from 'eslint';
+import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 
@@ -34,7 +35,7 @@ export default () => ({
 			'comma-dangle':          ['warn', 'never'],
 			'comma-spacing':         ['warn'],
 			'function-call-spacing': ['warn'],
-			'indent':                ['warn', 'tab'],
+			'indent':                ['warn', 'tab', { ignoredNodes: [AST_NODE_TYPES.TSTypeReference] }],
 			'key-spacing':           ['warn', {
 				singleLine: { beforeColon: false, afterColon: true, mode: 'strict' },
 				multiLine:  { beforeColon: false, afterColon: true, mode: 'strict', align: 'value' }

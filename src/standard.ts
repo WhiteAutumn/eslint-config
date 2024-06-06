@@ -13,7 +13,7 @@ export default (options?: Options) => ({
 		'no-cond-assign':                  ['warn'],
 		'no-const-assign':                 ['error'],
 		'no-constant-binary-expression':   ['warn'],
-		'no-constant-condition':           ['warn'],
+		'no-constant-condition':           ['warn', { checkLoops: false }],
 		'no-debugger':                     ['warn'],
 		'no-dupe-args':                    ['error'],
 		'no-dupe-class-members':           ['error'],

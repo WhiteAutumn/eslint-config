@@ -26,6 +26,7 @@ export default (options?: Options) => ({
 		'getter-return':         ['off'],
 		'no-class-assign':       ['off'],
 		'no-const-assign':       ['off'],
+		'no-constant-condition': ['off'],
 		'no-dupe-args':          ['off'],
 		'no-dupe-class-members': ['off'],
 		'no-dupe-keys':          ['off'],

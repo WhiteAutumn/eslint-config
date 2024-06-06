@@ -20,7 +20,7 @@ export default () => ({
 		'comma-spacing':             ['warn'],
 		'comma-style':               ['warn'],
 		'computed-property-spacing': ['warn'],
-		'dot-location':              ['warn'],
+		'dot-location':              ['warn', 'property'],
 		'eol-last':                  ['warn'],
 		'function-call-spacing':     ['warn'],
 		'generator-star-spacing':    ['warn', {

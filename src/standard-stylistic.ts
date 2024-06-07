@@ -28,7 +28,9 @@ export default () => ({
 			after:  true,
 			method: { before: true, after: false }
 		}],
-		'indent':      ['warn', 'tab'],
+		'indent': ['warn', 'tab', {
+			SwitchCase: 1
+		}],
 		'jsx-quotes':  ['warn', 'prefer-single'],
 		'key-spacing': ['warn', {
 			singleLine: { beforeColon: false, afterColon: true, mode: 'strict' },

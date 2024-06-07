@@ -35,8 +35,11 @@ export default () => ({
 			'comma-dangle':          ['warn', 'never'],
 			'comma-spacing':         ['warn'],
 			'function-call-spacing': ['warn'],
-			'indent':                ['warn', 'tab', { ignoredNodes: [AST_NODE_TYPES.TSTypeReference] }],
-			'key-spacing':           ['warn', {
+			'indent':                ['warn', 'tab', {
+				SwitchCase:   1,
+				ignoredNodes: [AST_NODE_TYPES.TSTypeReference]
+			}],
+			'key-spacing': ['warn', {
 				singleLine: { beforeColon: false, afterColon: true, mode: 'strict' },
 				multiLine:  { beforeColon: false, afterColon: true, mode: 'strict', align: 'value' }
 			}],

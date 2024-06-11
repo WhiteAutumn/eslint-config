@@ -56,7 +56,6 @@ export default (options?: Options) => ({
 			'no-array-constructor':                    ['warn'],
 			'no-array-delete':                         ['error'],
 			'no-base-to-string':                       ['warn'],
-			'no-confusing-void-expression':            ['warn', { ignoreArrowShorthand: true, ignoreVoidOperator: true }],
 			'no-duplicate-enum-values':                ['warn'],
 			'no-duplicate-type-constituents':          ['warn'],
 			'no-explicit-any':                         ['error'],

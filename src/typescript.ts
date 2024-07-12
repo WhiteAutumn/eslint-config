@@ -67,7 +67,7 @@ export default (options?: Options) => ({
 			'no-loss-of-precision':                    ['warn'],
 			'no-meaningless-void-operator':            ['warn'],
 			'no-misused-new':                          ['warn'],
-			'no-misused-promises':                     ['warn'],
+			'no-misused-promises':                     ['warn', { checksVoidReturn: { arguments: false } }],
 			'no-non-null-asserted-nullish-coalescing': ['warn'],
 			'no-redundant-type-constituents':          ['warn'],
 			'no-unnecessary-condition':                ['warn', { allowConstantLoopConditions: true }],

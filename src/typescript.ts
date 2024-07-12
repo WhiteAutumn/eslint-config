@@ -84,7 +84,6 @@ export default (options?: Options) => ({
 			'only-throw-error':                        ['warn'],
 			'prefer-as-const':                         ['warn'],
 			'prefer-find':                             ['warn'],
-			'prefer-for-of':                           ['warn'],
 			'prefer-function-type':                    ['warn'],
 			'prefer-includes':                         ['warn'],
 			'prefer-nullish-coalescing':               ['warn'],
@@ -107,7 +106,8 @@ export default (options?: Options) => ({
 		}),
 
 		...options?.strict !== true ? {} : prefixKeys('@typescript-eslint', {
-			'no-unused-vars': ['warn', { args: 'none' }]
+			'no-unused-vars': ['warn', { args: 'none' }],
+			'prefer-for-of':  ['warn']
 		})
 	}
 

@@ -19,7 +19,7 @@ export type Options = {
 export default (options?: Options) => {
 	const config: Linter.FlatConfig[] = [
 		standard(),
-		standardStylistic(),
+		standardStylistic(options),
 		importOrder()
 	];
 

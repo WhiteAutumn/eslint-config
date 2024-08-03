@@ -8,6 +8,8 @@ import typescript from './src/typescript.js';
 import typescriptStylistic from './src/typescript-stylistic.js';
 import typescriptStylisticPlus from './src/typescript-stylistic-plus.js';
 
+import autumnTs from './src/autumn-ts.js';
+
 import jsxStylistic from './src/jsx-stylistic.js';
 
 export type Options = {
@@ -27,7 +29,8 @@ export default (options?: Options) => {
 		config.push(
 			typescript(options),
 			typescriptStylistic(),
-			typescriptStylisticPlus()
+			typescriptStylisticPlus(),
+			autumnTs()
 		);
 	}
 

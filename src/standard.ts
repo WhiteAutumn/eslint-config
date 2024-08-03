@@ -36,7 +36,7 @@ export default (options?: Options) => ({
 		'no-setter-return':                ['error'],
 		'no-this-before-super':            ['error'],
 		'no-unexpected-multiline':         ['error'],
-		'no-unreachable':                  ['warn'],
+		'no-unreachable':                  ['off'],
 		'no-unreachable-loop':             ['warn'],
 		'no-unsafe-negation':              ['error'],
 		'no-unsafe-optional-chaining':     ['error'],
@@ -89,6 +89,7 @@ export default (options?: Options) => ({
 		'yoda':                           ['warn'],
 
 		...options?.strict !== true ? {} : {
+			'no-unreachable':                  ['warn'],
 			'no-unused-private-class-members': ['warn'],
 			'no-unused-vars':                  ['warn', { args: 'none' }]
 		}

@@ -54,8 +54,8 @@ export default (options?: Options) => ({
 		'no-case-declarations':           ['error'],
 		'no-delete-var':                  ['error'],
 		'no-else-return':                 ['warn'],
-		'no-empty':                       ['warn'],
-		'no-empty-static-block':          ['warn'],
+		'no-empty':                       ['off'],
+		'no-empty-static-block':          ['off'],
 		'no-extend-native':               ['error'],
 		'no-extra-bind':                  ['warn'],
 		'no-extra-label':                 ['warn'],
@@ -89,6 +89,8 @@ export default (options?: Options) => ({
 		'yoda':                           ['warn'],
 
 		...options?.strict !== true ? {} : {
+			'no-empty':                        ['warn'],
+			'no-empty-static-block':           ['warn'],
 			'no-unreachable':                  ['warn'],
 			'no-unused-private-class-members': ['warn'],
 			'no-unused-vars':                  ['warn', { args: 'none' }]

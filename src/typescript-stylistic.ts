@@ -23,6 +23,7 @@ export default () => ({
 			'key-spacing':                 ['off'],
 			'keyword-spacing':             ['off'],
 			'no-extra-semi':               ['off'],
+			'object-curly-spacing':        ['off'],
 			'quotes':                      ['off'],
 			'semi':                        ['off'],
 			'space-before-blocks':         ['off'],
@@ -49,6 +50,7 @@ export default () => ({
 				singleline: { delimiter: 'comma', requireLast: false }
 			}],
 			'no-extra-semi':               ['warn'],
+			'object-curly-spacing':        ['warn', 'always'],
 			'quotes':                      ['warn', 'single', { avoidEscape: true }],
 			'semi':                        ['warn', 'always'],
 			'space-before-blocks':         ['warn', 'always'],

@@ -37,7 +37,7 @@
     "@stylistic/eslint-plugin-ts": "^2.0.0",
     "@typescript-eslint/utils": "^7.0.0",
     "eslint-plugin-import": "^2.0.0",
-    "typescript-eslint": "^7.0.0"
+    "typescript-eslint": "^8.7.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.0.0",

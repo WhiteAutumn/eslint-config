@@ -10,6 +10,18 @@
   "volta": {
     "node": "20.14.0"
   },
+  "homepage": "https://github.com/WhiteAutumn/eslint-standard",
+  "bugs": {
+    "url": "https://github.com/WhiteAutumn/eslint-standard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhiteAutumn/eslint-standard.git"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",

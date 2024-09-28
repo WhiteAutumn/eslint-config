@@ -1,7 +1,7 @@
 {
   "name": "@autumn.dev/eslint-config",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "My personal config for eslint",
   "author": "WhiteAutumn",
   "license": "MIT",

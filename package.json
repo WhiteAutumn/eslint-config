@@ -21,6 +21,7 @@
   "files": [
     "dist",
     "src",
+    "config.ts",
     "LICENSE"
   ],
   "scripts": {

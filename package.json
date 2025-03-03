@@ -10,13 +10,13 @@
   "volta": {
     "node": "20.14.0"
   },
-  "homepage": "https://github.com/WhiteAutumn/eslint-standard",
+  "homepage": "https://github.com/WhiteAutumn/eslint-config",
   "bugs": {
-    "url": "https://github.com/WhiteAutumn/eslint-standard/issues"
+    "url": "https://github.com/WhiteAutumn/eslint-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WhiteAutumn/eslint-standard.git"
+    "url": "git+https://github.com/WhiteAutumn/eslint-config.git"
   },
   "files": [
     "dist",

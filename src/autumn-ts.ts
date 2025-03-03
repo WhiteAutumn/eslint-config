@@ -34,7 +34,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 
 		messages: {
 			expectedSpaceBefore:   'Expected space before =',
-			expectedSpaceAfter:    'Expected space after =',
+			expectedSpaceAfter:    'Expected space or newline after =',
 			unexpectedSpaceBefore: 'Unexpected space before =',
 			unexpectedSpaceAfter:  'Unexpected space after ='
 		}
@@ -94,7 +94,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 				});
 			}
 
-			if (config.after && afterSpacing !== ' ') {
+			if (config.after && afterSpacing !== ' ' && !afterSpacing.startsWith('\n') && !afterSpacing.startsWith('\r\n')) {
 				context.report({
 					node:      node,
 					messageId: 'expectedSpaceAfter',

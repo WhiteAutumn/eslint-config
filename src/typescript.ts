@@ -70,7 +70,6 @@ export default (options?: Options) => ({
 			'no-misused-promises':                     ['warn', { checksVoidReturn: { arguments: false } }],
 			'no-non-null-asserted-nullish-coalescing': ['warn'],
 			'no-redundant-type-constituents':          ['warn'],
-			'no-unnecessary-condition':                ['warn', { allowConstantLoopConditions: true }],
 			'no-unnecessary-template-expression':      ['warn'],
 			'no-unnecessary-type-arguments':           ['warn'],
 			'no-unnecessary-type-assertion':           ['warn'],

@@ -9,7 +9,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 		type:    'layout',
 		docs:    { description: 'Enforce spacing for type declaration' },
 		fixable: 'whitespace',
-		
+
 		schema: [
 			{
 				oneOf: [
@@ -76,7 +76,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 						start: context.sourceCode.getLocFromIndex(assignStartAbsolute),
 						end:   context.sourceCode.getLocFromIndex(assignStartAbsolute + beforeSpacing.length)
 					},
-					
+
 					fix: fixer => fixer.replaceTextRange([assignStartAbsolute, assignStartAbsolute + beforeSpacing.length], ' ')
 				});
 			}
@@ -89,7 +89,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 						start: context.sourceCode.getLocFromIndex(assignStartAbsolute),
 						end:   context.sourceCode.getLocFromIndex(assignStartAbsolute + beforeSpacing.length)
 					},
-					
+
 					fix: fixer => fixer.replaceTextRange([assignStartAbsolute, assignStartAbsolute + beforeSpacing.length], '')
 				});
 			}
@@ -103,7 +103,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 						start: context.sourceCode.getLocFromIndex(assignEndAbsolute - afterSpacing.length),
 						end:   context.sourceCode.getLocFromIndex(assignEndAbsolute)
 					},
-					
+
 					fix: fixer => fixer.replaceTextRange([assignEndAbsolute - afterSpacing.length, assignEndAbsolute], ' ')
 				});
 			}
@@ -116,7 +116,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 						start: context.sourceCode.getLocFromIndex(assignEndAbsolute - afterSpacing.length),
 						end:   context.sourceCode.getLocFromIndex(assignEndAbsolute)
 					},
-					
+
 					fix: fixer => fixer.replaceTextRange([assignEndAbsolute - afterSpacing.length, assignEndAbsolute], '')
 				});
 			}

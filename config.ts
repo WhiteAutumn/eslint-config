@@ -3,10 +3,12 @@ import type { Linter } from 'eslint';
 import standard from './src/standard.js';
 import standardStylistic from './src/standard-stylistic.js';
 import importOrder from './src/import-order.js';
+import tests from './src/tests.js';
 
 import typescript from './src/typescript.js';
 import typescriptStylistic from './src/typescript-stylistic.js';
 import typescriptStylisticPlus from './src/typescript-stylistic-plus.js';
+import typescriptTests from './src/typescript-tests.js';
 
 import autumnTs from './src/autumn-ts.js';
 
@@ -22,7 +24,8 @@ export default (options?: Options) => {
 	const config: Linter.FlatConfig[] = [
 		standard(),
 		standardStylistic(options),
-		importOrder()
+		importOrder(),
+		tests()
 	];
 
 	if (options?.typescript ?? false) {
@@ -30,7 +33,8 @@ export default (options?: Options) => {
 			typescript(options),
 			typescriptStylistic(),
 			typescriptStylisticPlus(),
-			autumnTs()
+			autumnTs(),
+			typescriptTests()
 		);
 	}
 

@@ -24,7 +24,7 @@ export default (options?: Options) => {
 	const config: Linter.FlatConfig[] = [
 		standard(),
 		standardStylistic(options),
-		importOrder(),
+		importOrder(options),
 		tests()
 	];
 

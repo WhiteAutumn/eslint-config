@@ -89,7 +89,7 @@ export default (options?: Options) => ({
 			'prefer-includes':                         ['warn'],
 			'prefer-nullish-coalescing':               ['warn'],
 			'prefer-optional-chain':                   ['warn'],
-			'prefer-promise-reject-errors':            ['warn'],
+			'prefer-promise-reject-errors':            ['warn', { allowThrowingUnknown: true }],
 			'prefer-reduce-type-parameter':            ['warn'],
 			'prefer-regexp-exec':                      ['warn'],
 			'prefer-return-this-type':                 ['warn'],

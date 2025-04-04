@@ -79,7 +79,6 @@ export default (options?: Options) => ({
 		'no-with':                        ['error'],
 		'object-shorthand':               ['warn', 'consistent-as-needed'],
 		'prefer-arrow-callback':          ['warn'],
-		'prefer-const':                   ['warn'],
 		'prefer-exponentiation-operator': ['warn'],
 		'prefer-named-capture-group':     ['warn'],
 		'prefer-promise-reject-errors':   ['warn'],
@@ -93,7 +92,8 @@ export default (options?: Options) => ({
 			'no-empty-static-block':           ['warn'],
 			'no-unreachable':                  ['warn'],
 			'no-unused-private-class-members': ['warn'],
-			'no-unused-vars':                  ['warn', { args: 'none' }]
+			'no-unused-vars':                  ['warn', { args: 'none' }],
+			'prefer-const':                    ['warn']
 		}
 	}
 

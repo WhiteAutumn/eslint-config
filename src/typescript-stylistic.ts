@@ -1,6 +1,6 @@
 import type { ESLint, Linter } from 'eslint';
-import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 
+import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 
 import { prefixKeys } from './util/prefix-keys.js';

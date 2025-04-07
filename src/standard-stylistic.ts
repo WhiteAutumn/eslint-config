@@ -1,8 +1,8 @@
 import type { ESLint, Linter } from 'eslint';
+import type { Options } from '../config.js';
 
 import stylisticJs from '@stylistic/eslint-plugin-js';
 
-import type { Options } from '../config.js';
 import { prefixKeys } from './util/prefix-keys.js';
 
 export default (options?: Options) => ({

@@ -1,8 +1,8 @@
 import type { Linter } from 'eslint';
+import type { Options } from '../config.js';
 
 import importOrder from 'eslint-plugin-import';
 
-import type { Options } from '../config.js';
 import { prefixKeys } from './util/prefix-keys.js';
 
 
@@ -16,8 +16,9 @@ export default (options?: Options) => ({
 		...prefixKeys('import', {
 			'no-mutable-exports': ['error'],
 			'order':              ['warn', {
-				groups: [
-					'builtin', 'external', 'internal', 'parent', 'sibling', 'index'
+				'newlines-between': 'always',
+				'groups':           [
+					'type', 'builtin', 'external', 'internal', 'parent', 'sibling', 'index'
 				]
 			}]
 		}),

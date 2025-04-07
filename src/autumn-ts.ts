@@ -1,7 +1,8 @@
 import type { ESLint } from 'eslint';
-
 import type { TSESTree } from '@typescript-eslint/utils';
+
 import { ESLintUtils } from '@typescript-eslint/utils';
+
 import { prefixKeys } from './util/prefix-keys.js';
 
 const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({

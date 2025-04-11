@@ -51,7 +51,6 @@ export default (options?: Options) => ({
 			'consistent-type-assertions':              ['warn', { assertionStyle: 'angle-bracket', objectLiteralTypeAssertions: 'allow' }],
 			'consistent-type-definitions':             ['warn', 'type'],
 			'consistent-type-imports':                 ['warn', { prefer: 'type-imports', fixStyle: 'separate-type-imports', disallowTypeAnnotations: false }],
-			'method-signature-style':                  ['warn', 'property'],
 			'no-array-constructor':                    ['warn'],
 			'no-array-delete':                         ['error'],
 			'no-base-to-string':                       ['warn'],

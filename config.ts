@@ -1,4 +1,5 @@
 import type { Linter } from 'eslint';
+import type { PathGroup } from './src/import-order.js';
 
 import standard from './src/standard.js';
 import standardStylistic from './src/standard-stylistic.js';
@@ -15,6 +16,10 @@ export type Options = {
 	strict?:     boolean;
 	typescript?: boolean;
 	jsx?:        boolean;
+
+	importOrder?: {
+		pathGroups?: PathGroup[];
+	};
 };
 
 export default (options?: Options) => {

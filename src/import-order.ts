@@ -5,6 +5,11 @@ import importOrder from 'eslint-plugin-import';
 
 import { prefixKeys } from './util/prefix-keys.js';
 
+export type PathGroup = {
+	pattern:  string;
+	group:    'builtin' | 'external' | 'internal' | 'parent' | 'sibling' | 'index' | 'object' | 'type';
+	position: 'after' | 'before';
+};
 
 export default (options?: Options) => ({
 
@@ -19,7 +24,12 @@ export default (options?: Options) => ({
 				'newlines-between': 'always',
 				'groups':           [
 					'type', 'builtin', 'external', 'internal', 'parent', 'sibling', 'index'
-				]
+				],
+
+				...(options?.importOrder?.pathGroups != null && options.importOrder.pathGroups.length > 0 ? {
+					pathGroupsExcludedImportTypes: ['type'],
+					pathGroups:                    options.importOrder.pathGroups
+				} : {})
 			}]
 		}),
 

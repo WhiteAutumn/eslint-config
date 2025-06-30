@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import type { Options } from '../config.js';
 
-import importOrder from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import';
 
 import { prefixKeys } from './util/prefix-keys.js';
 
@@ -14,7 +14,7 @@ export type PathGroup = {
 export default (options?: Options) => ({
 
 	plugins: {
-		import: importOrder
+		import: importPlugin
 	},
 
 	rules: {

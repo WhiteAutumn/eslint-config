@@ -11,6 +11,7 @@ import typescriptStylisticPlus from './src/typescript-stylistic-plus.js';
 import typescriptTests from './src/typescript-tests.js';
 import autumnTs from './src/plugin-autumn.js';
 import jsxStylistic from './src/stylistic-jsx.js';
+import pluginN from './src/plugin-n.js';
 
 export type Options = {
 	strict?:     boolean;
@@ -27,6 +28,7 @@ export default (options?: Options) => {
 		standard(),
 		standardStylistic(options),
 		importOrder(options),
+		pluginN(),
 		tests()
 	];
 

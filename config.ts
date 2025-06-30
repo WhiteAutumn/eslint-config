@@ -1,16 +1,16 @@
 import type { Linter } from 'eslint';
-import type { PathGroup } from './src/import-order.js';
+import type { PathGroup } from './src/plugin-import.js';
 
 import standard from './src/standard.js';
-import standardStylistic from './src/standard-stylistic.js';
-import importOrder from './src/import-order.js';
+import standardStylistic from './src/stylistic-standard.js';
+import importOrder from './src/plugin-import.js';
 import tests from './src/tests.js';
 import typescript from './src/typescript.js';
 import typescriptStylistic from './src/typescript-stylistic.js';
 import typescriptStylisticPlus from './src/typescript-stylistic-plus.js';
 import typescriptTests from './src/typescript-tests.js';
-import autumnTs from './src/autumn-ts.js';
-import jsxStylistic from './src/jsx-stylistic.js';
+import autumnTs from './src/plugin-autumn.js';
+import jsxStylistic from './src/stylistic-jsx.js';
 
 export type Options = {
 	strict?:     boolean;

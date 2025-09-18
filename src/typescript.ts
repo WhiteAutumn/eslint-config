@@ -57,7 +57,6 @@ export default (options?: Options) => ({
 			'no-duplicate-enum-values':                ['warn'],
 			'no-duplicate-type-constituents':          ['warn'],
 			'no-empty-object-type':                    ['warn'],
-			'no-explicit-any':                         ['error'],
 			'no-extra-non-null-assertion':             ['warn'],
 			'no-floating-promises':                    ['warn'],
 			'no-for-in-array':                         ['warn'],

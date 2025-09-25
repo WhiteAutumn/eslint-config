@@ -18,7 +18,7 @@ export default (options?: Options) => ({
 	},
 
 	plugins: {
-		'@typescript-eslint': <ESLint.Plugin> tseslint.plugin
+		'@typescript-eslint': tseslint.plugin as ESLint.Plugin
 	},
 
 	rules: {
@@ -48,7 +48,7 @@ export default (options?: Options) => ({
 			'array-type':                              ['warn', { default: 'array-simple' }],
 			'ban-ts-comment':                          ['warn'],
 			'consistent-generic-constructors':         ['warn', 'constructor'],
-			'consistent-type-assertions':              ['warn', { assertionStyle: 'angle-bracket', objectLiteralTypeAssertions: 'allow' }],
+			'consistent-type-assertions':              ['warn', { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow' }],
 			'consistent-type-definitions':             ['warn', 'type'],
 			'consistent-type-imports':                 ['warn', { prefer: 'type-imports', fixStyle: 'separate-type-imports', disallowTypeAnnotations: false }],
 			'no-array-constructor':                    ['warn'],

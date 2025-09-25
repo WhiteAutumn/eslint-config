@@ -60,7 +60,7 @@ const typeAliasDeclareSpacing = ESLintUtils.RuleCreator.withoutDocs({
 				after:  boolean;
 			};
 
-			const mode = <Mode> options.at(0);
+			const mode = options.at(0) as Mode;
 			const isAlways = mode === 'always' ? true : null;
 			const isNever = mode === 'never' ? false : null;
 			const config = {
@@ -133,7 +133,7 @@ export const plugin = {
 
 export default () => ({
 	plugins: {
-		'@autumn.dev/ts': <ESLint.Plugin> <unknown> plugin
+		'@autumn.dev/ts': plugin as unknown as ESLint.Plugin
 	},
 
 	rules: prefixKeys('@autumn.dev/ts', {

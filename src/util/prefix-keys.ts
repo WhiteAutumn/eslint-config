@@ -13,5 +13,5 @@ export const prefixKeys = <const P extends string, const T extends Record<string
 		result[`${prefix}/${key}`] = target[key];
 	}
 
-	return <PrefixedRecord<P, T>> result;
+	return result as PrefixedRecord<P, T>;
 };

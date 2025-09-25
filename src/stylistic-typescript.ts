@@ -7,7 +7,7 @@ import { prefixKeys } from './util/prefix-keys.js';
 export default () => ({
 
 	plugins: {
-		'@stylistic': <ESLint.Plugin> stylistic
+		'@stylistic': stylistic as ESLint.Plugin
 	},
 
 	rules: {

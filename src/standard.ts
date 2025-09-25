@@ -46,7 +46,6 @@ export default (options?: Options) => ({
 		'use-isnan':                       ['error'],
 		'valid-typeof':                    ['error'],
 
-		'arrow-body-style':               ['warn'],
 		'curly':                          ['warn'],
 		'grouped-accessor-pairs':         ['warn'],
 		'no-array-constructor':           ['warn'],
@@ -88,6 +87,7 @@ export default (options?: Options) => ({
 		'yoda':                           ['warn'],
 
 		...options?.strict !== true ? {} : {
+			'arrow-body-style':                ['warn'],
 			'no-empty':                        ['warn'],
 			'no-empty-static-block':           ['warn'],
 			'no-unreachable':                  ['warn'],

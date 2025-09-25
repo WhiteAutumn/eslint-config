@@ -7,4 +7,4 @@ export default () => ({
 	rules: prefixKeys('@typescript-eslint', {
 		'no-unused-expressions': 'off'
 	})
-} satisfies Linter.FlatConfig);
+} satisfies Linter.Config);

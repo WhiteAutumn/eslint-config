@@ -97,4 +97,4 @@ export default (options?: Options) => ({
 		}
 	}
 
-} satisfies Linter.FlatConfig);
+} satisfies Linter.Config);

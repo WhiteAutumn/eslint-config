@@ -10,7 +10,7 @@ export default (options?: Options) => ({
 
 	languageOptions: {
 		sourceType: 'module',
-		parser:     <Linter.ParserModule> tseslint.parser,
+		parser:     tseslint.parser as Linter.Parser,
 
 		parserOptions: {
 			project: true
@@ -109,4 +109,4 @@ export default (options?: Options) => ({
 		})
 	}
 
-} satisfies Linter.FlatConfig);
+} satisfies Linter.Config);

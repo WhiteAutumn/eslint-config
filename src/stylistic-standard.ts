@@ -1,18 +1,18 @@
 import type { ESLint, Linter } from 'eslint';
 import type { Options } from '../config.js';
 
-import stylisticJs from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 
 import { prefixKeys } from './util/prefix-keys.js';
 
 export default (options?: Options) => ({
 
 	plugins: {
-		'@stylistic/js': <ESLint.Plugin> stylisticJs
+		'@stylistic': <ESLint.Plugin> stylistic
 	},
 
 	rules: {
-		...prefixKeys('@stylistic/js', {
+		...prefixKeys('@stylistic', {
 			'array-bracket-spacing':     ['warn', 'never'],
 			'arrow-parens':              ['warn', 'as-needed'],
 			'arrow-spacing':             ['warn', { before: true, after: true }],
@@ -64,10 +64,9 @@ export default (options?: Options) => ({
 			'yield-star-spacing':   ['warn', { before: false, after: true }]
 		}),
 
-		...(options?.strict !== true ? {} : prefixKeys('@stylistic/js', {
+		...(options?.strict !== true ? {} : prefixKeys('@stylistic', {
 			'no-trailing-spaces': ['warn']
 		}))
 
 	}
-
-} satisfies Linter.FlatConfig);
+} satisfies Linter.Config);

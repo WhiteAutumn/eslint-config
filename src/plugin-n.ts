@@ -14,4 +14,4 @@ export default () => ({
 			'prefer-node-protocol': ['warn']
 		})
 	}
-}) satisfies Linter.FlatConfig;
+}) satisfies Linter.Config;

@@ -5,4 +5,4 @@ export default () => ({
 	rules: {
 		'no-unused-expressions': 'off'
 	}
-} satisfies Linter.FlatConfig);
+} satisfies Linter.Config);

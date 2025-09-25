@@ -1,17 +1,17 @@
 import type { ESLint, Linter } from 'eslint';
 
-import stylisticJsx from '@stylistic/eslint-plugin-jsx';
+import stylistic from '@stylistic/eslint-plugin';
 
 import { prefixKeys } from './util/prefix-keys.js';
 
 export default () => ({
 
 	plugins: {
-		'@stylistic/eslint-plugin-jsx': <ESLint.Plugin> stylisticJsx
+		'@stylistic': <ESLint.Plugin> stylistic
 	},
 
 	rules: {
-		...prefixKeys('@stylistic/eslint-plugin-jsx', {
+		...prefixKeys('@stylistic', {
 			'jsx-closing-bracket-location': ['warn', 'line-aligned'],
 			'jsx-curly-brace-presence':     ['warn', 'never'],
 			'jsx-curly-spacing':            ['warn', {
@@ -33,4 +33,4 @@ export default () => ({
 		})
 	}
 
-} satisfies Linter.FlatConfig);
+} satisfies Linter.Config);

@@ -1,50 +1,55 @@
 import type { Linter } from 'eslint';
-import type { PathGroup } from './src/plugin-import.js';
+import type { Const } from './src/common/const.js';
+import type { ImportOptions } from './src/rules/imports.js';
+import type { NodeOptions } from './src/rules/node.js';
 
-import standard from './src/standard.js';
-import stylisticStandard from './src/stylistic-standard.js';
-import stylisticTypescript from './src/stylistic-typescript.js';
-import stylisticJsx from './src/stylistic-jsx.js';
-import typescript from './src/typescript.js';
-import testsStandard from './src/tests-standard.js';
-import testsTypescript from './src/tests-typescript.js';
-import autumnPluginTypescript from './src/plugin-autumn-typescript.js';
-import importPlugin from './src/plugin-import.js';
-import nPlugin from './src/plugin-n.js';
+import eslintRules from './src/rules/eslint.js';
+import stylisticRules from './src/rules/stylistic.js';
+import typescriptRules from './src/rules/typescript.js';
+import testRules from './src/rules/tests.js';
+import importsRules from './src/rules/imports.js';
+import nodeRules from './src/rules/node.js';
+
+export { discoverNodeVersion, discoverWorkspacePackages, discoverInternalImports } from './src/common/project.js';
+export type { ImportOptions, PathGroup } from './src/rules/imports.js';
+export type { NodeOptions } from './src/rules/node.js';
 
 export type Options = {
-	strict?:     boolean;
+	strict?: boolean;
+	ideal?:  boolean;
+
 	typescript?: boolean;
 	jsx?:        boolean;
 
-	importOrder?: {
-		pathGroups?: PathGroup[];
-	};
+	imports?: ImportOptions;
+	node?:    NodeOptions;
 };
 
-export default (options?: Options) => {
+export default ({ ...options }: Const<Options> = {}) => {
+	options.ideal ??= true;
+
 	const config: Linter.Config[] = [
-		standard(options),
-		stylisticStandard(options),
-		testsStandard(),
-		importPlugin(options),
-		nPlugin()
+		{
+			linterOptions: {
+				reportUnusedDisableDirectives: options.strict === true ? 'warn' : 'off'
+			}
+		},
+
+		eslintRules(options),
+		stylisticRules(options),
+		importsRules(options),
+		nodeRules(options)
 	];
 
 	if (options?.typescript ?? false) {
 		config.push(
-			typescript(options),
-			stylisticTypescript(),
-			testsTypescript(),
-			autumnPluginTypescript()
+			typescriptRules(options)
 		);
 	}
 
-	if (options?.jsx ?? false) {
-		config.push(
-			stylisticJsx()
-		);
-	}
+	config.push(
+		testRules(options)
+	);
 
 	return config;
 };

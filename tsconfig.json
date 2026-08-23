@@ -3,16 +3,20 @@
   
   "compilerOptions": {
     // Target
-    "target": "ESNEXT",
-    "lib": ["ESNEXT"],
-    "module": "NODENEXT",
-
-    "jsx":"preserve",
+    "target": "es2024",
+    "lib": ["es2024", "esnext.array", "es2025.iterator"],
+    "module": "nodenext",
+    "types": ["node"],
 
     // Safety
     "strict": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
 
     // Behavior
+    "skipLibCheck": true,
     "esModuleInterop": true,
 
     // Output

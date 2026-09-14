@@ -2,13 +2,13 @@ import type { Linter } from 'eslint';
 import type { Options } from '#config';
 import type { Const } from '#common/const';
 
-import imports from 'eslint-plugin-import';
+import imports from 'eslint-plugin-import-x';
 
 import { block } from '#common/block';
 import { prefixKeys } from '#common/prefix-keys';
 
 /*
-	It is the intent of this config to include all rules of the eslint-plugin-import package,
+	It is the intent of this config to include all rules of the eslint-plugin-import-x package,
 	both enabled and disabled, and a reason for their inclusion or exclusion from the config.
 */
 
@@ -26,10 +26,10 @@ export type ImportOptions = {
 export default (options: Const<Options>) => ({
 
 	plugins: {
-		import: imports
+		'import-x': imports
 	},
 
-	rules: prefixKeys('import/', {
+	rules: prefixKeys('import-x/', {
 		// Avoid mistakes or incorrect code
 		'export':              ['error'],
 		'no-mutable-exports':  ['warn'],
@@ -74,25 +74,22 @@ export default (options: Const<Options>) => ({
 			};
 		})],
 
-		// Handled by node plugin
-		'enforce-node-protocol-usage': ['off'],
-
 		// Only enforced in strict mode
 		'no-empty-named-blocks':      ['off'],
 		'no-extraneous-dependencies': ['off'],
 		'no-absolute-path':           ['off'],
 
 		// Only enforced in ideal mode
-		'no-deprecated':              ['off'],
-		'no-relative-packages':       ['off'],
-		'no-relative-parent-imports': ['off'],
-		'no-self-import':             ['off'],
+		'no-deprecated':        ['off'],
+		'no-relative-packages': ['off'],
+		'no-self-import':       ['off'],
 
 		// Its autofix for type imports can produce invalid imports.
 		'no-duplicates': ['off'],
 
 		// No opinion
 		'no-named-as-default-member':  ['off'],
+		'no-rename-default':           ['off'],
 		'no-unused-modules':           ['off'],
 		'no-amd':                      ['off'],
 		'no-commonjs':                 ['off'],
@@ -102,6 +99,7 @@ export default (options: Const<Options>) => ({
 		'no-cycle':                    ['off'],
 		'no-dynamic-require':          ['off'],
 		'no-internal-modules':         ['off'],
+		'no-relative-parent-imports':  ['off'],
 		'no-restricted-paths':         ['off'],
 		'no-webpack-loader-syntax':    ['off'],
 		'dynamic-import-chunkname':    ['off'],
@@ -115,6 +113,7 @@ export default (options: Const<Options>) => ({
 		'no-namespace':                ['off'],
 		'no-unassigned-import':        ['off'],
 		'prefer-default-export':       ['off'],
+		'prefer-namespace-import':     ['off'],
 
 		...options.typescript !== true ? {} : {
 			// Handled by typescript
@@ -137,8 +136,7 @@ export default (options: Const<Options>) => ({
 
 		...options.ideal !== true ? {} : {
 			// Personal preference
-			'no-relative-packages':       ['warn'],
-			'no-relative-parent-imports': ['warn'],
+			'no-relative-packages': ['warn'],
 
 			// Avoid mistakes or incorrect code
 			'no-self-import': ['warn'],

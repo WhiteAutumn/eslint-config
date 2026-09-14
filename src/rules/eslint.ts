@@ -234,6 +234,9 @@ export default (options: Const<Options>) => ({
 		'no-useless-constructor': ['off'],
 		'prefer-const':           ['off'],
 
+		// Only enforced in ideal mode
+		'no-restricted-imports': ['off'],
+
 		// No opinion
 		'accessor-pairs':           ['off'],
 		'camelcase':                ['off'],
@@ -270,7 +273,6 @@ export default (options: Const<Options>) => ({
 		'no-plusplus':              ['off'],
 		'no-restricted-exports':    ['off'],
 		'no-restricted-globals':    ['off'],
-		'no-restricted-imports':    ['off'],
 		'no-restricted-properties': ['off'],
 		'no-restricted-syntax':     ['off'],
 		'no-ternary':               ['off'],
@@ -300,6 +302,16 @@ export default (options: Const<Options>) => ({
 			// Simplification
 			'arrow-body-style':       ['warn'],
 			'no-useless-constructor': ['warn']
+		},
+
+		...options.ideal !== true ? {} : {
+			// Prefer # aliases for relative imports that reach far outside its own directory.
+			'no-restricted-imports': ['warn', {
+				patterns: [{
+					regex:   '^\\.\\./[^/]+/',
+					message: 'Disallowed far reaching relative import. Use a # import alias instead.'
+				}]
+			}]
 		}
 	}
 }) satisfies Linter.Config;

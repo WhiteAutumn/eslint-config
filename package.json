@@ -53,11 +53,14 @@
     "eslint-plugin-no-only-tests": "~3.4.0",
     "typescript-eslint": "~8.70.0"
   },
+  "peerDependencies": {
+    "eslint": "^10.0.0"
+  },
   "devDependencies": {
     "@types/eslint": "^9.0.0",
     "@types/node": "^24.0.0",
     "cross-env": "^10.0.0",
-    "eslint": "^9.0.0",
+    "eslint": "^10.10.0",
     "typescript": "~6.0.0"
   },
   "allowScripts": {

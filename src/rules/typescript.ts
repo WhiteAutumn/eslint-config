@@ -273,7 +273,8 @@ export default (options: Const<Options>) => ({
 			...options.ideal !== true ? {} : {
 				// Personal preference
 				'prefer-readonly-parameter-types': ['warn', {
-					ignoreInferredTypes: true,
+					ignoreInferredTypes:    true,
+					treatMethodsAsReadonly: true,
 
 					allow: [{ from: 'file', name: 'Shared' }]
 				}],

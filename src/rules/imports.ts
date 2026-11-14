@@ -87,6 +87,10 @@ export default (options: Const<Options>) => ({
 		// Its autofix for type imports can produce invalid imports.
 		'no-duplicates': ['off'],
 
+		// Barrel files can be intentional public entry points.
+		'avoid-barrel-files':           ['off'],
+		'avoid-importing-barrel-files': ['off'],
+
 		// No opinion
 		'no-named-as-default-member':  ['off'],
 		'no-rename-default':           ['off'],
@@ -111,6 +115,8 @@ export default (options: Const<Options>) => ({
 		'no-default-export':           ['off'],
 		'no-named-export':             ['off'],
 		'no-namespace':                ['off'],
+		'avoid-namespace-import':      ['off'],
+		'avoid-re-export-all':         ['off'],
 		'no-unassigned-import':        ['off'],
 		'prefer-default-export':       ['off'],
 		'prefer-namespace-import':     ['off'],

@@ -19,7 +19,7 @@ export default (options: Const<Options>) => ({
 	rules: prefixKeys('@stylistic/', {
 		// Personal preference
 		'array-bracket-newline':          ['warn', 'consistent'],
-		'array-bracket-spacing':          ['warn', 'never'],
+		'array-bracket-spacing':          ['warn'],
 		'arrow-parens':                   ['warn', 'as-needed'],
 		'arrow-spacing':                  ['warn', { before: true, after: true }],
 		'block-spacing':                  ['warn', 'always'],
@@ -54,6 +54,7 @@ export default (options: Const<Options>) => ({
 		'semi-spacing':                   ['warn'],
 		'semi-style':                     ['warn', 'last'],
 		'space-before-blocks':            ['warn'],
+		'space-in-parens':                ['warn'],
 		'space-unary-ops':                ['warn'],
 		'switch-colon-spacing':           ['warn'],
 		'template-curly-spacing':         ['warn'],
@@ -80,8 +81,8 @@ export default (options: Const<Options>) => ({
 
 		// I understand the arguments for dangling commas, but for short lists of elements I think they look a bit ugly. I have decided to allow them but not require them.
 		'comma-dangle':       ['warn', 'only-multiline'],
-		// Once this rules gets moved out of being experimental it should likely replaced related individual rules
-		'exp-list-style':     ['off'],
+		// This rules does too much and allows too little customization. It would be better split into individual rules.
+		'list-style':         ['off'],
 		// Skill issue
 		'no-confusing-arrow': ['off'],
 		// Parentheses may intentionally improve clarity or delimit a multi-line expression.
@@ -96,7 +97,6 @@ export default (options: Const<Options>) => ({
 		'one-var-declaration-per-line':     ['off'],
 
 		// No opinion
-		'array-element-newline':           ['off'],
 		'line-comment-position':           ['off'],
 		'lines-around-comment':            ['off'],
 		'max-len':                         ['off'],
@@ -108,10 +108,8 @@ export default (options: Const<Options>) => ({
 		'no-floating-decimal':             ['off'],
 		'no-multiple-empty-lines':         ['off'],
 		'no-tabs':                         ['off'],
-		'object-property-newline':         ['off'],
 		'operator-linebreak':              ['off'],
 		'padding-line-between-statements': ['off'],
-		'space-in-parens':                 ['off'],
 		'space-infix-ops':                 ['off'],
 		'spaced-comment':                  ['off'],
 		'wrap-regex':                      ['warn'],
@@ -130,6 +128,8 @@ export default (options: Const<Options>) => ({
 			'jsx-indent-props':             ['warn', 'tab'],
 			'jsx-pascal-case':              ['warn', { allowNamespace: true }],
 			'jsx-quotes':                   ['warn', 'prefer-single'],
+			'jsx-shorthand-boolean':        ['warn'],
+			'jsx-shorthand-fragment':       ['warn'],
 			'jsx-tag-spacing':              ['warn', { beforeSelfClosing: 'never' }],
 
 			// No opinion
